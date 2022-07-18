@@ -1,0 +1,183 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../public/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+
+  .container {
+    width: 85%;
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 42px;
+      line-height: 25px;
+    }
+
+    p {
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .row {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 30px;
+        align-self: stretch;
+
+        > div {
+          display: flex;
+          gap: 20px;
+
+          .icon {
+            width: 40px;
+            height: 40px;
+            margin-top: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+          }
+
+          .text {
+            h4 {
+              font-size: 16px;
+              color: #894;
+              line-height: 10px;
+            }
+            p {
+              line-height: 10px;
+              color: #fff;
+            }
+            span {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .form {
+        flex: 1;
+        align-self: center;
+
+        form {
+          width: 50%;
+          margin: 0 auto;
+          background-color: #fff;
+          padding: 20px;
+
+          @media(max-width: 1200px) {
+            width: 80%;
+          }
+
+          .form-group {
+            margin-bottom: 30px;
+            input,
+            textarea {
+              width: 100%;
+              border: none;
+              border-bottom: 1px solid #000;
+              font-size: 16px;
+              padding: 5px;
+            }
+          }
+
+          button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            transition: 0.4s ease all;
+            cursor: pointer;
+
+            &:hover {
+              background-color: red;
+            }
+          }
+
+          
+        }
+      }
+    }
+
+  
+
+    @media(max-width: 1024px) {
+      width: 90%;
+    }
+
+  }
+  @media(max-width: 768px) {
+    min-height: 100vh;
+    height: auto;
+    .container {
+      width: 90%;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+      
+      .row {
+        flex-direction: column;
+        gap: 20px;
+  
+        .info {
+          flex-direction: row;
+          align-self: center;
+          justify-content: center;
+
+          > div {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .text {
+              display: none;
+            }
+
+            .icon {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+  
+        .form {
+          width: 100%;
+          background-color: #894;
+          display: flex;
+          align-items: center;
+
+          form {
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
